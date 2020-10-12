@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should correctly trigger events when data is split 1`] = `
+Array [
+  Event {
+    "data": "\\"secrets0\\"",
+    "isTrusted": false,
+    "lastEventId": "0",
+    "origin": "https://lol.com",
+  },
+  Event {
+    "data": "\\"secrets1\\"",
+    "isTrusted": false,
+    "lastEventId": "1",
+    "origin": "https://lol.com",
+  },
+  Event {
+    "data": "\\"secrets2\\"",
+    "isTrusted": false,
+    "lastEventId": "2",
+    "origin": "https://lol.com",
+  },
+  Event {
+    "data": "\\"secrets3\\"",
+    "isTrusted": false,
+    "lastEventId": "3",
+    "origin": "https://lol.com",
+  },
+  Event {
+    "data": "\\"secrets4\\"",
+    "isTrusted": false,
+    "lastEventId": "4",
+    "origin": "https://lol.com",
+  },
+]
+`;
+
+exports[`should handle comment fields, spaces and empty ID values (SPEC Example 2) 1`] = `
+Array [
+  Event {
+    "data": "first event",
+    "isTrusted": false,
+    "lastEventId": "1",
+    "origin": "https://lol.com",
+  },
+  Event {
+    "data": "second event",
+    "isTrusted": false,
+    "lastEventId": "",
+    "origin": "https://lol.com",
+  },
+  Event {
+    "data": "third event",
+    "isTrusted": false,
+    "lastEventId": "",
+    "origin": "https://lol.com",
+  },
+]
+`;
+
+exports[`should handle multiple data fields in one event (SPEC Example 1) 1`] = `
+Event {
+  "data": "YHOO
++2
+10",
+  "isTrusted": false,
+  "lastEventId": "",
+  "origin": "https://lol.com",
+}
+`;
+
+exports[`should only send events after new lines and double empty data should fire event with a new line (SPEC Example 3) 1`] = `
+Array [
+  Event {
+    "data": "",
+    "isTrusted": false,
+    "lastEventId": "",
+    "origin": "https://lol.com",
+  },
+  Event {
+    "data": "
+",
+    "isTrusted": false,
+    "lastEventId": "",
+    "origin": "https://lol.com",
+  },
+]
+`;
+
+exports[`should send ignore white space after colon to produce same event (SPEC Example 4) 1`] = `
+Array [
+  Event {
+    "data": "test",
+    "isTrusted": false,
+    "lastEventId": "",
+    "origin": "https://lol.com",
+  },
+  Event {
+    "data": "test",
+    "isTrusted": false,
+    "lastEventId": "",
+    "origin": "https://lol.com",
+  },
+]
+`;
