@@ -1,7 +1,7 @@
 {
   "name": "fetch-event-source",
   "description": "Fetch implementation of EventSource with more functionality such as HTTP headers and support for Node.js.",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "license": "MIT",
   "keywords": [
     "sse"
