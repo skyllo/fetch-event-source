@@ -2,7 +2,7 @@
 
 [![FetchEventSource](https://circleci.com/gh/skyllo/fetch-event-source.svg?style=svg)](https://circleci.com/gh/skyllo/fetch-event-source)
 
-Fetch implementation of EventSource with more functionality like setting HTTP headers and support for Node.js. Written in TypeScript with the types includes in the package.
+Fetch implementation of EventSource with more functionality like setting HTTP headers and support for Node.js. Written in TypeScript with the types included in the package.
 
 # Features
 * Lightweight! 4kb in size (2kb gzip)
