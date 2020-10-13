@@ -55,7 +55,7 @@ export default abstract class BaseFetchEventSource extends EventTarget {
     super();
     // check url is set
     if (!url) {
-      throw new Error('Cannot open an FetchgEventSource to an empty URL.');
+      throw new Error('Cannot open an FetchEventSource to an empty URL.');
     }
     this.url = url;
     this.#config = { ...this.#config, ...config };
